@@ -1,0 +1,20 @@
+#ratio def par defaut --> False 
+def arrondi(val,ratio=False):
+    if not ratio :
+        return round(val,2)
+    if ratio :
+        return round(val,4)
+
+
+#round permet de faire un arrondi avec prise en compte valeur de démarcation
+# 8.56 --> 8.6 et non simplement une tronquature (8.56 --> 8.5)
+
+# cas par defaut ratio --> false (arrondi 2)
+test1=arrondi(8.256254262)
+#Affiche le resultat
+print(test1)
+
+# cas ratio passé en True
+test2=arrondi(8.256254262,True)
+# Affiche le resultat
+print(test2)
